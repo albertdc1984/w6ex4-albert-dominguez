@@ -1,7 +1,8 @@
 require("dotenv").config();
 
-const port = process.env.SERVER_PORT || 3005;
 const initializeServer = require("./server/index");
+
+const port = process.env.SERVER_PORT || 3005;
 
 (async () => {
   await initializeServer(port);

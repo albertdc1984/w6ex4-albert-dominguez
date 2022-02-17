@@ -1,7 +1,9 @@
 const express = require("express");
 
+const debug = require("debug")("router:");
+
 const app = express();
-const debug = require("debug");
+const router = require("./routes/router");
 
 app.use(express.json());
 
@@ -23,4 +25,4 @@ app.use((req, res, next) => {
   next();
 });
 
-exports.initializeServer = initializeServer;
+module.exports = initializeServer;
